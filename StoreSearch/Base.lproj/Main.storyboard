@@ -24,7 +24,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="lL9-YH-asx"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="App name, artist, song, album, e-book" id="QEw-xs-EIH">
+                            <searchBar contentMode="redraw" text="" placeholder="App name, artist, song, album, e-book" id="QEw-xs-EIH">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
