@@ -16,6 +16,7 @@
 		880E605E252C57DB0096B7A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 880E605C252C57DB0096B7A1 /* LaunchScreen.storyboard */; };
 		886E3010252DA3D900C25BFA /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886E300F252DA3D900C25BFA /* SearchResultCell.xib */; };
 		886E3013252DAC4C00C25BFA /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E3012252DAC4C00C25BFA /* SearchResultCell.swift */; };
+		88BC1AE62535A1A200505314 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BC1AE52535A1A200505314 /* LoadingCell.xib */; };
 		88FC3D50252C718500BE22E6 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC3D4F252C718500BE22E6 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		880E605F252C57DB0096B7A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		886E300F252DA3D900C25BFA /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		886E3012252DAC4C00C25BFA /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		88BC1AE52535A1A200505314 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		88FC3D4F252C718500BE22E6 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,8 +72,9 @@
 				886E3012252DAC4C00C25BFA /* SearchResultCell.swift */,
 				886E300F252DA3D900C25BFA /* SearchResultCell.xib */,
 				88099361252DB2A4004D05CA /* NothingFoundCell.xib */,
-				88FC3D4F252C718500BE22E6 /* SearchResult.swift */,
+				88BC1AE52535A1A200505314 /* LoadingCell.xib */,
 				880E6057252C57D80096B7A1 /* Main.storyboard */,
+				88FC3D4F252C718500BE22E6 /* SearchResult.swift */,
 				880E605A252C57DB0096B7A1 /* Assets.xcassets */,
 				880E605C252C57DB0096B7A1 /* LaunchScreen.storyboard */,
 				880E605F252C57DB0096B7A1 /* Info.plist */,
@@ -138,6 +141,7 @@
 			files = (
 				880E605E252C57DB0096B7A1 /* LaunchScreen.storyboard in Resources */,
 				880E605B252C57DB0096B7A1 /* Assets.xcassets in Resources */,
+				88BC1AE62535A1A200505314 /* LoadingCell.xib in Resources */,
 				886E3010252DA3D900C25BFA /* SearchResultCell.xib in Resources */,
 				88099362252DB2A4004D05CA /* NothingFoundCell.xib in Resources */,
 				880E6059252C57D80096B7A1 /* Main.storyboard in Resources */,
