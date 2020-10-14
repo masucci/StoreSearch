@@ -33,7 +33,7 @@
                                 </connections>
                             </searchBar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOo-5r-yiD">
-                                <rect key="frame" x="0.0" y="76" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="3hI-HT-Yto">
                                         <nil key="title"/>
@@ -62,7 +62,7 @@
                             <constraint firstItem="Boo-xs-k33" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VF4-pr-RDb"/>
                             <constraint firstItem="Boo-xs-k33" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f8R-hy-0QQ"/>
                             <constraint firstItem="Boo-xs-k33" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h7m-h7-XKr"/>
-                            <constraint firstItem="pOo-5r-yiD" firstAttribute="top" secondItem="QEw-xs-EIH" secondAttribute="bottom" constant="12" id="pbx-GB-Ek1"/>
+                            <constraint firstItem="pOo-5r-yiD" firstAttribute="top" secondItem="QEw-xs-EIH" secondAttribute="bottom" id="pbx-GB-Ek1"/>
                             <constraint firstItem="pOo-5r-yiD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rQm-kZ-f0U"/>
                         </constraints>
                     </view>
