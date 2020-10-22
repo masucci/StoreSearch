@@ -42,6 +42,13 @@ class DetailViewController: UIViewController {
         transitioningDelegate = self
     }
     
+    enum AnimationStyle {
+        case slide
+        case fade
+    }
+    
+    var dismissStyle = AnimationStyle.fade
+    
     @IBAction func openInStore() {
         if let url = URL(string: searchResult.storeURL){
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -87,6 +94,7 @@ class DetailViewController: UIViewController {
     
 //MARK: - Actions
     @IBAction func close() {
+        dismissStyle = .slide
         dismiss(animated: true, completion: nil)
     }
     
@@ -98,6 +106,22 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
 
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return DimmingPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return BounceAnimationController()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        switch dismissStyle {
+        case .slide:
+            return SlideOutAnimationController()
+
+        case .fade:
+            return FadeOutAnimationController()
+
+        }
     }
 }
 
