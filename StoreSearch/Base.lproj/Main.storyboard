@@ -228,13 +228,17 @@
                     <connections>
                         <outlet property="pageControl" destination="wRr-xp-6ru" id="abJ-vw-hKz"/>
                         <outlet property="scrollView" destination="feK-jd-gXj" id="9HQ-Zw-jkQ"/>
+                        <segue destination="Plp-r3-SR3" kind="presentation" identifier="ShowDetail" id="I7x-i6-1qv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clq-oy-ffe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="834"/>
+            <point key="canvasLocation" x="447" y="903"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XVe-oV-nc4"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="CloseButton" width="15" height="15"/>
         <image name="PriceButton" width="11" height="24"/>
