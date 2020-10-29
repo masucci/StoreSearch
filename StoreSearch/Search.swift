@@ -31,9 +31,9 @@ class Search {
         var type: String {
             switch self {
             case .all: return ""
-            case .music: return "musicTrack"
-            case .software: return "software"
-            case .ebooks: return "ebook"
+            case .music: return NSLocalizedString("musicTrack", comment: "Localized kind: musicTrack")
+            case .software: return NSLocalizedString("software", comment: "Localized kind: software")
+            case .ebooks: return NSLocalizedString("ebook", comment: "Localized kind: ebook")
             }
         }
     }
@@ -78,10 +78,17 @@ class Search {
     }
     
     private func iTunesURL(searchText: String, category: Category) -> URL {
+        
+        let locale = Locale.autoupdatingCurrent
+        let language = locale.identifier
+        let countryCode = locale.regionCode ?? "US"
+        
         let kind = category.type
         
         let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200&entity=\(kind)", encodedText)
+        let urlString = "https://itunes.apple.com/search?" +
+            "term=\(encodedText)&limit=200&entity=\(kind)" +
+            "&lang=\(language)&country=\(countryCode)"
         let url = URL(string: urlString)
         return url!
     }

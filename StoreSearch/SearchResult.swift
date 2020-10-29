@@ -31,7 +31,29 @@ class SearchResult: Codable, CustomStringConvertible {
 
     var imageSmall = ""
     var imageLarge = ""
-
+    
+    private let typeForKind = [
+      "album": NSLocalizedString("Album",
+                        comment: "Localized kind: Album"),
+      "audiobook": NSLocalizedString("Audio Book",
+                            comment: "Localized kind: Audio Book"),
+      "book": NSLocalizedString("Book",
+                       comment: "Localized kind: Book"),
+      "ebook": NSLocalizedString("E-Book",
+                        comment: "Localized kind: E-Book"),
+      "feature-movie": NSLocalizedString("Movie",
+                       comment: "Localized kind: Feature Movie"),
+      "music-video": NSLocalizedString("Music Video",
+                     comment: "Localized kind: Music Video"),
+      "podcast": NSLocalizedString("Podcast",
+                          comment: "Localized kind: Podcast"),
+      "software": NSLocalizedString("App",
+                           comment: "Localized kind: Software"),
+      "song": NSLocalizedString("Song",
+                       comment: "Localized kind: Song"),
+      "tv-episode": NSLocalizedString("TV Episode", comment: "Localized kind: TV Episode"),
+        ]
+    
 
 
     enum CodingKeys: String, CodingKey {
@@ -50,7 +72,7 @@ class SearchResult: Codable, CustomStringConvertible {
     }
 
     var description: String {
-        return "Kind: \(kind ?? "None"), Name: \(name), Artist Name: \(artistName ?? "None")"
+        return NSLocalizedString("Kind: \(kind ?? "None"), Name: \(name), Artist Name: \(artistName ?? "None")", comment: "Localized kind: Kind: \(kind ?? "None"), Name: \(name), Artist Name: \(artistName ?? "None")")
     }
 
 
@@ -68,20 +90,8 @@ class SearchResult: Codable, CustomStringConvertible {
     
     var type: String {
         let kind = self.kind ?? "audiobook"
-        switch kind {
-        case "album": return "Album"
-        case "audiobook": return "Audio Book"
-        case "book": return "Book"
-        case "ebook": return "E-Book"
-        case "feature-movie": return "Movie"
-        case "music-video": return "Music Video"
-        case "podcast": return "Podcast"
-        case "software": return "App"
-        case "song": return "Song"
-        case "tv-episode": return " TV Episode"
-        default: break
-        }
-        return "Unknown"
+        return typeForKind[kind] ?? kind
+        
     }
     
     var artist: String {
